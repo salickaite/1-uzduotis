@@ -76,7 +76,7 @@ int main() {
         }
         else
         {
-            cout << "Iveskite " << i+1 <<" studento namu darbu pazymius (noredami baigti iveskite -1):" << endl;
+            cout << "Iveskite " << i+1 <<" studento pazymius uz namu darbus, kau baigsite iveskite -1:" << endl;
             cin >> pazymys;
 
             while (pazymys != -1)
