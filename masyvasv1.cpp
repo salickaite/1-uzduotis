@@ -97,7 +97,7 @@ int main() {
                 cin >> pazymys;
             }
         }
-        cout << "Iveskite 1 jei norite sugeneruoti egzaminu pazymius " << i+1 << " studentui, jei norite ivesti pazymius patys paspauskite +" << endl;
+        cout << "Iveskite 1 jei norite sugeneruoti egzamino pazymi " << i+1 << " studentui, jei norite ivesti pazymius patys paspauskite +" << endl;
         cin >> ivestis;
         if (ivestis == "1")
         {   
