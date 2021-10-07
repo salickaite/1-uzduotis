@@ -120,7 +120,7 @@ int main()
             cin >> ivestis;
         }
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < studentu_sk; i++)
         {
             cout << "Iveskite " << i + 1 << " -o studento varda ir pavarde : ";
             cin >> temp_student.vardas >> temp_student.pavarde;
