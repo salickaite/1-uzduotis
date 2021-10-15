@@ -9,3 +9,7 @@
 - Versiją, kurioje buvo naudojamas vektorius, papildome nauja funkcija, kuri leidžiančia nuskaityti duomenis iš failo;
 - Jei buvo pasirinkta duomenis imti iš pateikto "txt" failo, rezultatai bus atspausdinami į ekraną, taip pat, kaip ir suvedant ranka;
 - Duomenys apie studentą rūšiuojami pagal pavardes.
+
+# v0.3
+- Sukurti atskiri header failai, į kuriuos buvo perkelta struktūra "studentas" bei kitos funkcijos;
+- Buvo pridėtas išimčių valdymas (runtime_error, invalid_argument).
