@@ -90,72 +90,7 @@ int main()
 
         open_f.close();
     }
-    /*if (read_type == "F" || read_type == "f")
-    {
-        int rows = 0, cols = 0;
-        float temp_paz;
-        string eil, item;
-        ifstream open_f("kursiokai.txt");
-        try
-        {
-          if (open_f.fail()) throw std::runtime_error("Nepavyko atidaryti nurodyto failo");
-        }
-        catch (std::runtime_error& e)
-        {
-          cout << e.what();
-          exit(1);
-        }
-        
-        while (open_f)
-        {
-            if (!open_f.eof())
-            {
-                getline(open_f, eil);
-                rows++;
-                if (rows == 1)
-                {
-                    stringstream ss(eil);
-                    while (ss >> item) cols++;
-                }
-                open_f >> temp_student.vardas >> temp_student.pavarde;
-                temp_student.nd.reserve(cols - 3);
-                for (int j = 0; j < cols - 3; j++)
-                {
-                    open_f >> temp_paz;
-                    try
-                    {
-                      if (temp_paz < 1 || temp_paz > 10) throw std::runtime_error("Namu darbu pazymiai turi buti nuo 1 iki 10. Patikrinkite txt faile esancius duomenis. ");
-                    }
-                    catch (std::runtime_error& e)
-                    {
-                      cout << e.what();
-                      exit(1);
-                    }
-                    temp_student.nd.push_back(temp_paz);
-                }
-                open_f >> temp_student.egz;
-                try
-                {
-                  if (temp_student.egz < 1 || temp_student.egz > 10) throw std::runtime_error("Egzamino ivertinimo pazymys turi buti nuo 1 iki 10. Patikrinkite txt faile esancius duomenis. ");
-                }
-                catch (std::runtime_error& e)
-                {
-                  cout <<e.what();
-                  exit(1);
-                }
-                vid = accumulate(temp_student.nd.begin(), temp_student.nd.end(), 0.0) / temp_student.nd.size();
-                temp_student.gal_vid = 0.4 * vid + 0.6 * temp_student.egz;
-                med = mediana(temp_student.nd);
-                temp_student.gal_med = 0.4 * med + 0.6 * temp_student.egz;
-                grupe.push_back(temp_student);
-                temp_student.nd.clear();
-
-            }
-            else break;
-        }
-
-        open_f.close();
-    }*/
+   
     if (read_type == "R" || read_type == "r")
     {
         cout << "Jei norite, kad studentu pazymiai butu generuojami AUTOMATISKAI spauskite \"A\".\n Jei norite pazymius suvesti PATYS spauskite \"P\".";
@@ -194,12 +129,6 @@ int main()
             cin >> studentu_sk;
           }
         }
-        
-        //while (ivestis != "A" && ivestis != "a" && ivestis != "P" && ivestis != "p")
-        //{
-        //    cout << "Netinkamas simbolis. Bandykite dar karta.  ";
-        //    cin >> ivestis;
-        //}
 
         for (int i = 0; i < studentu_sk; i++)
         {
