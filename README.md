@@ -1,5 +1,5 @@
 # v0.4
-- Pridėta galimybė vartotojui pasirinkti ar atlikti programos veiksmo greičio analizę ar ne;
+- Pridėta galimybė vartotojui pasirinkti ar atlikti programos veikimo greičio analizę ar ne;
 - Įrašasnt duomenis į naujus txt failus yra naudojama ne srand funkcija, o panaudota random biblioteka;
 - Sugeneruoti atsitiktiniai failai su studentų vardais, pavardėm bei galutiniais pažymiais;
 - Studentai, pagal galutinius įvertinimus buvo suskirtyti į "vargšiukus" ir "kietiakus" (jei galutinis balas < 5.0 "vargšiukai", jei galutinis balas >= 5.0 "kietiakai");
