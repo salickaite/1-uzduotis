@@ -43,6 +43,7 @@ int main()
 {
     srand(time(NULL));
     float vid, med;
+    int kiek;
     string ivestis, gal_ivestis, read_type, generuoti;
     studentas temp_student;
     vector <studentas> grupe;
@@ -66,15 +67,9 @@ int main()
     }
     if (generuoti == "T" || generuoti == "t")
     {
-        file(1000);
-
-        file(10000);
-
-        file(100000);
-
-        file(1000000);
-
-        file(10000000);
+        cout << "Iveskite studentu skaiciu: ";
+        cin >> kiek;
+        file(kiek);
     }
 
 
