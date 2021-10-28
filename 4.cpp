@@ -48,7 +48,7 @@ int main()
     studentas temp_student;
     vector <studentas> grupe;
 
-    //GENERUOTI PASIRINKIMAS
+    //PASIRINKIMAS AR ATLIKTI GREICIO ANALIZE
 
     cout << "Jei norite atlikti programos veikimo greicio analize spauskite T (taip), jei nenorite spauskite N (ne). ";
     cin >> generuoti;
