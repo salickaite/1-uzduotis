@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-#include "mediana.h"
+#include "funkcijos.h"
 using std::string;
 
 struct studentas
