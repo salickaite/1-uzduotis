@@ -1,4 +1,22 @@
 # 1-uzduotis
+# Užduoties aprašymas
+1. Vartotojas pasirenka ar nori automatiškai generuoti failą ir atlikti jo duomenų nuskaitymo bei rūšiavimo į dvi grupes spartą. 
+  - Jei pasirenkama 'T' (taip):
+      - Prašoma įvesti duomenų kiekį. Pagal nurodytą skaičių programa sukuria failą su tiek studentų kiek nurodė vartotojas. Faile yra saugomi studentų vardai, pavardės, galutiniai įvertinimai. Programa nuskaito failą ir nuskaitymo laiką atspausdina ekrane.
+      - Vartotojas pasirenka, kuria strategija rūšioti studentus pagal galutinį pažymį:
+        - Kuriami du vektoriai 'kietiakai' ir 'vargsiukai';
+        - Studentai, su mažesniu nei 5 galutiniu įvertinimu perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio.
+      Ekrane išvedama informacija kiek laiko užtruko rūšiavimas, o urūšiuoti duomenys išvedami į du atskirus failus.
+  - Jei vartotojas pasirenka 'N' (ne):
+      - Prašoma pasirinkti ar duomenis nori nuskaityti iš failo ar įvesti patys.
+          - Jei pasirenkama nuskaityti iš failo, tai duomenys yra nuskaitomi nuo failo "kursiokai.txt". Jei failas egzistuoja, duomenys nuskaitomi į vektorių ir leidžiama pasirinkti ar galutinį pažymį atspausdinti pagal vidurkį ar medianą.
+          - Jei pasirenkamas įvedimas ranka, prašoma pasirinkti ar egzamino bei namų darbų pažymius sugeneruoti automatiškai ar įvesti ranka.
+           
+            - Abiem atvejais prašoma įvesti studentų skaičių bei vardus ir pavardes.
+            - Pasirinkus automatinį pažymių generavimą prašomą įvesti jų kiekį.
+            - Pasirinkus įvedimą patiems, suvedus visus pažymius parašyti simbolį '+'.
+            - Prašoma pasirinkti ar galutinį pažymį norima matyti suskaičiuotą pagal medianą ar vidurkį.
+      - Ekrane atspausdinami studentų vardai ir pavardės su pasirinktu galutinio pažymio išvedimu.
 # v0.1
 - Sukurta struktūra "studentas";
 - Įvedamas studentų skaičius, vardai ir pavardės;
