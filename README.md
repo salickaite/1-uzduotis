@@ -1,4 +1,23 @@
 # 1-uzduotis
+# Užduoties aprašymas
+1. Vartotojas pasirenka ar nori automatiškai generuoti failą ir atlikti jo duomenų nuskaitymo bei rūšiavimo į dvi grupes spartą. 
+  - Jei pasirenkama 'T' (taip):
+      - Prašoma įvesti duomenų kiekį. Pagal nurodytą skaičių programa sukuria failą su tiek studentų kiek nurodė vartotojas. Faile yra saugomi studentų vardai, pavardės, galutiniai įvertinimai. Programa nuskaito failą ir nuskaitymo laiką atspausdina ekrane.
+      - Vartotojas pasirenka, kuria strategija rūšioti studentus pagal galutinį pažymį:
+        - Kuriami du vektoriai 'kietiakai' ir 'vargsiukai';
+        - Studentai, su mažesniu nei 5 galutiniu įvertinimu perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio.
+      Ekrane išvedama informacija kiek laiko užtruko rūšiavimas, o urūšiuoti duomenys išvedami į du atskirus failus.
+  - Jei vartotojas pasirenka 'N' (ne):
+      - Prašoma pasirinkti ar duomenis nori nuskaityti iš failo ar įvesti patys.
+          - Jei pasirenkama nuskaityti iš failo, tai duomenys yra nuskaitomi nuo failo "kursiokai.txt". Jei failas egzistuoja, duomenys nuskaitomi į vektorių ir leidžiama pasirinkti ar galutinį pažymį atspausdinti pagal vidurkį ar medianą.
+          - Jei pasirenkamas įvedimas ranka, prašoma pasirinkti ar egzamino bei namų darbų pažymius sugeneruoti automatiškai ar įvesti ranka.
+           
+            - Abiem atvejais prašoma įvesti studentų skaičių bei vardus ir pavardes.
+            - Pasirinkus automatinį pažymių generavimą prašomą įvesti jų kiekį.
+            - Pasirinkus įvedimą patiems, suvedus visus pažymius parašyti simbolį '+'.
+            - Prašoma pasirinkti ar galutinį pažymį norima matyti suskaičiuotą pagal medianą ar vidurkį.
+      - Ekrane atspausdinami studentų vardai ir pavardės su pasirinktu galutinio pažymio išvedimu.
+
 # v0.1
 - Sukurta struktūra "studentas";
 - Įvedamas studentų skaičius, vardai ir pavardės;
@@ -55,3 +74,35 @@
 | 100 000       | 0.278273 s    | 0.0259769 s   |
 | 1 000 000     | 2.76988 s     | 0.287499 s    |
 | 10 000 000    | 30.5464 s     | 3.29583 s     |
+
+# v1.0
+
+Lyginamos dvi strategijos, kurios dalina nuskaito duomenis ir surūšiuoja studentus į dvi grupes.
+
+1. Studentai dedami į konteinerius 'kietiakai' ir 'vargsiukai pagal galutinį įvertinimą;
+2. Studentai, kurių pažymys yea mažesnis nei už 5, yra perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio konteinerio 'studentai'. Konteineryje 'studentai' lieka tik 'kietiakai' t.y. studentai, kurių galutinis balas yra lygus arba didesnis negu 5.
+
+Rūšiavimo laikai:
+
+**1 strategija**
+
+|               | Rūšiavimas 'vector'  | Rūšiavimas 'list'   |
+| ------------- | -------------        | -------------       |
+| 1 000         | 4.36e-05 s           | 0.0002464 s         |
+| 10 000        | 0.0010357 s          | 0.0025794 s         |
+| 100 000       | 0.0081072 s          | 0.0545146 s         |
+| 1 000 000     | 0.102605 s           | 0.345809 s          |
+| 10 000 000    | 6.26013 s            | 8.96787 s           |
+
+
+**2 strategija**
+
+|               | Rūšiavimas 'vector'  | Rūšiavimas 'list'   |
+| ------------- | -------------        | -------------       |
+| 1 000         | 8.13e-05 s           | 0.0001993 s         |
+| 10 000        | 0.0016487 s          | 0.0015196 s         |
+| 100 000       | 0.0082672 s          | 0.0315691 s         |
+| 1 000 000     | 0.0516942 s          | 0.333509 s          |
+| 10 000 000    | 0.58994 s            | 3.46819 s           |
+
+Iš rezultatų matyti, kad sparčiau veikia antra strategija.
