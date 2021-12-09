@@ -3,7 +3,7 @@
 Lyginamos dvi strategijos, kurios dalina nuskaito duomenis ir surūšiuoja studentus į dvi grupes.
 
 1. Studentai dedami į konteinerius 'kietiakai' ir 'vargsiukai pagal galutinį įvertinimą;
-2. Studentai, kurių pažymys yea mažesnis nei už 5, yra perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio konteinerio 'studentai'. Konteineryje 'studentai' lieka tik 'kietiakai' t.y. studentai, kurių galutinis balas yra lygus arba didesnis negu 5.
+2. Studentai, kurių pažymys yra mažesnis nei už 5, yra perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio konteinerio 'studentai'. Konteineryje 'studentai' lieka tik 'kietiakai' t.y. studentai, kurių galutinis balas yra lygus arba didesnis negu 5.
 
 Rūšiavimo laikai:
 
