@@ -23,6 +23,7 @@ void vector_t(int kiekis)
 	cout << endl;
 	cout << "VECTOR REZULTATAI: " << endl;
 	auto start1 = std::chrono::high_resolution_clock::now();
+	studentas temp;
 
 	vector<studentas> studentai;
 
@@ -38,13 +39,15 @@ void vector_t(int kiekis)
 		cout << e.what();
 		exit(1);
 	}
+	
 	getline(openf, eil);
-
-	for (auto& i : studentai)
+	for (int i = 0; i < kiekis; i++)
 	{
-		openf >> i.vardas >> i.pavarde >> i.gal_vid;
+		openf >> temp.vardas >> temp.pavarde >> temp.gal_vid;
+		studentai.push_back(temp);
 	}
 	openf.close();
+
 	auto end1 = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> diff1 = end1 - start1;
 	cout << "Failo su " << kiekis << " studentu NUSKAITYMAS uztruko " << diff1.count() << " s" << endl;
