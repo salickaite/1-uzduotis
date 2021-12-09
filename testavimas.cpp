@@ -31,6 +31,7 @@ void vector_t(int kiek)
 	cout << endl;
 	cout << "VECTOR REZULTATAI: " << endl;
 	auto start1 = std::chrono::high_resolution_clock::now();
+	studentas temp;
 
 	vector<studentas> studentai;
 
@@ -46,10 +47,12 @@ void vector_t(int kiek)
 		cout << e.what();
 		exit(1);
 	}
+	
 	getline(openf, eil);
 	for (int i = 0; i < kiek; i++)
 	{
-		openf >> studentai[i].vardas >> studentai[i].pavarde >> studentai[i].gal_vid;
+		openf >> temp.vardas >> temp.pavarde >> temp.gal_vid;
+		studentai.push_back(temp);
 	}
 	openf.close();
 	auto end1 = std::chrono::high_resolution_clock::now();
