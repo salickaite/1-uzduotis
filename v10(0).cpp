@@ -1,4 +1,3 @@
-//#include "My_libs.h"
 #include "funkcijos.h"
 #include <cstdio>
 #include "laikmatis.h"
@@ -33,10 +32,9 @@ int main()
             cin >> pav >> sz;
             create_file(pav, sz);
         }
-        else { uzpildymas(); }
-
+        else 
+        { 
+            uzpildymas(); 
+        }
     }
-
-
-
 }
