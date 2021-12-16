@@ -435,11 +435,9 @@ void testas() {
     padalijimas_v2(grupe_vec);
     float t2 = t.elapsed();
     cout << "Padalijimas 2 budu uztruko: " << t2 << " s" << endl;
-    //cout << "Santykis t1/t2: " << t1 / t2 << endl << endl;
-
-    //system("pause");
+    
     cout << endl;
-    //************************************************************************************
+    
 
 
     cout << "NAUDOJANT LISTUS:" << endl << endl;
@@ -457,11 +455,9 @@ void testas() {
     padalijimas_l2(grupe_lst);
     t2 = t.elapsed();
     cout << "Padalijimas 2 budu uztruko: " << t2 << " s" << endl;
-    //cout << "Santykis t1/t2: " << t1 / t2 << endl << endl;
-
-    //system("pause");
+    
     cout << endl;
-    //*************************************************************************************
+    
 
 
     nuskaitymas_v("stud100000.txt");
@@ -491,9 +487,6 @@ void testas() {
     cout << "Padalijimas 1 budu uztruko: " << t1 << " s" << endl;
     cout << "Padalijimas 2 budu uztruko: " << t2 << " s" << endl;
     cout << "Padalijimas 3 budu uztruko: " << t3 << " s" << endl;
-
-    //cout << "Santykis t1/t3: " << t1 / t3 << endl;
-    //cout << "Santykis t2/t3: " << t2 / t3 << endl;
 }
 
 
