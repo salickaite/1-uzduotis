@@ -6,7 +6,7 @@
       - Vartotojas pasirenka, kuria strategija rūšioti studentus pagal galutinį pažymį:
         - Kuriami du vektoriai 'kietiakai' ir 'vargsiukai';
         - Studentai, su mažesniu nei 5 galutiniu įvertinimu perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio.
-      Ekrane išvedama informacija kiek laiko užtruko rūšiavimas, o urūšiuoti duomenys išvedami į du atskirus failus.
+      Ekrane išvedama informacija kiek laiko užtruko rūšiavimas, o surūšiuoti duomenys išvedami į du atskirus failus.
   - Jei vartotojas pasirenka 'N' (ne):
       - Prašoma pasirinkti ar duomenis nori nuskaityti iš failo ar įvesti patys.
           - Jei pasirenkama nuskaityti iš failo, tai duomenys yra nuskaitomi nuo failo "kursiokai.txt". Jei failas egzistuoja, duomenys nuskaitomi į vektorių ir leidžiama pasirinkti ar galutinį pažymį atspausdinti pagal vidurkį ar medianą.
@@ -14,7 +14,6 @@
            
             - Abiem atvejais prašoma įvesti studentų skaičių bei vardus ir pavardes.
             - Pasirinkus automatinį pažymių generavimą prašomą įvesti jų kiekį.
-            - Pasirinkus įvedimą patiems, suvedus visus pažymius parašyti simbolį '+'.
             - Prašoma pasirinkti ar galutinį pažymį norima matyti suskaičiuotą pagal medianą ar vidurkį.
       - Ekrane atspausdinami studentų vardai ir pavardės su pasirinktu galutinio pažymio išvedimu.
 # v0.1
@@ -30,11 +29,11 @@
 
 # v0.3
 - Sukurti atskiri header failai, į kuriuos buvo perkelta struktūra "studentas" bei kitos funkcijos;
-- Buvo pridėtas išimčių valdymas (runtime_error, invalid_argument).
+- Buvo pridėtas išimčių valdymas.
 
 # v0.4
 - Pridėta galimybė vartotojui pasirinkti ar atlikti programos veiksmo greičio analizę ar ne;
-- Įrašasnt duomenis į naujus txt failus yra naudojama ne srand funkcija, o panaudota random biblioteka;
+- Įrašant duomenis į naujus txt failus yra naudojama ne srand funkcija, o panaudota random biblioteka;
 - Sugeneruoti atsitiktiniai failai su studentų vardais, pavardėm bei galutiniais pažymiais;
 - Studentai, pagal galutinius įvertinimus buvo suskirtyti į "vargšiukus" ir "kietiakus" (jei galutinis balas < 5.0 "vargšiukai", jei galutinis balas >= 5.0 "kietiakai");
 - Atskyrus studentus į dvi grupes, duomenys surašomi į txt failus.
