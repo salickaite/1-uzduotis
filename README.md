@@ -1,32 +1,25 @@
 # v1.0
 
-Lyginamos dvi strategijos, kurios dalina nuskaito duomenis ir surūšiuoja studentus į dvi grupes.
+Lyginamos dvi strategijos, kurios nuskaito duomenis ir surūšiuoja studentus į dvi grupes.
 
-1. Studentai dedami į konteinerius 'kietiakai' ir 'vargsiukai pagal galutinį įvertinimą;
-2. Studentai, kurių pažymys yra mažesnis nei už 5, yra perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio konteinerio 'studentai'. Konteineryje 'studentai' lieka tik 'kietiakai' t.y. studentai, kurių galutinis balas yra lygus arba didesnis negu 5.
+1. Pridėtas papildomas studentų padalijimo metodas.
+2. Atliktas testas tiek su vektoriais, tiek su listais siekiant ištirti rūšiavimo spartą.
+3. Sukurtas rūšiavimo metodas su std::partition (su vektoriais).
 
-Rūšiavimo laikai:
+Padalijimo laikai:
 
-**1 strategija**
+NAUDOJANT VEKTORIUS:
 
-|               | Rūšiavimas 'vector'  | Rūšiavimas 'list'   |
-| ------------- | -------------        | -------------       |
-| 1 000         | 4.36e-05 s           | 0.0002464 s         |
-| 10 000        | 0.0010357 s          | 0.0025794 s         |
-| 100 000       | 0.0081072 s          | 0.0545146 s         |
-| 1 000 000     | 0.102605 s           | 0.345809 s          |
-| 10 000 000    | 6.26013 s            | 8.96787 s           |
+Padalijimas 1 budu uztruko: 0.0616207 s
+Padalijimas 2 budu uztruko: 0.0466278 s
 
+NAUDOJANT LISTUS:
 
-**2 strategija**
+Padalijimas 1 budu uztruko: 0.0422437 s
+Padalijimas 2 budu uztruko: 0.0534314 s
 
-|               | Rūšiavimas 'vector'  | Rūšiavimas 'list'   |
-| ------------- | -------------        | -------------       |
-| 1 000         | 8.13e-05 s           | 0.0001993 s         |
-| 10 000        | 0.0016487 s          | 0.0015196 s         |
-| 100 000       | 0.0082672 s          | 0.0315691 s         |
-| 1 000 000     | 0.0516942 s          | 0.333509 s          |
-| 10 000 000    | 0.58994 s            | 3.46819 s           |
+Padalijimas 1 budu uztruko: 0.0581852 s
+Padalijimas 2 budu uztruko: 0.0585955 s
+Padalijimas 3 budu uztruko: 0.0218151 s
 
-Iš rezultatų matyti, kad sparčiau veikia antra strategija.
-
+Išvados: 1-u būdu rūšiavimas su listais veikia greičiau. 2-u būdu, su vektoriais greičiau. 3-čias būdas, naudojant std::partition veikia greičiau už ankstesnius būdus.
