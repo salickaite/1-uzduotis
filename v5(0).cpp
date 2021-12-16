@@ -47,7 +47,7 @@ int main()
 
 
     grupe_vec.clear();
-    vargsiukai_l.clear();
+    vargsiukai_v.clear();
     kietiakai_v.clear();
 
     cout << "NAUDOJANT LISTUS: " << endl << endl;
