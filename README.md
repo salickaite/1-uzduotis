@@ -1,21 +1,16 @@
 # 1-uzduotis
 # Užduoties aprašymas
-1. Vartotojas pasirenka ar nori automatiškai generuoti failą ir atlikti jo duomenų nuskaitymo bei rūšiavimo į dvi grupes spartą. 
-  - Jei pasirenkama 'T' (taip):
-      - Prašoma įvesti duomenų kiekį. Pagal nurodytą skaičių programa sukuria failą su tiek studentų kiek nurodė vartotojas. Faile yra saugomi studentų vardai, pavardės, galutiniai įvertinimai. Programa nuskaito failą ir nuskaitymo laiką atspausdina ekrane.
-      - Vartotojas pasirenka, kuria strategija rūšioti studentus pagal galutinį pažymį:
-        - Kuriami du vektoriai 'kietiakai' ir 'vargsiukai';
-        - Studentai, su mažesniu nei 5 galutiniu įvertinimu perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio.
-      Ekrane išvedama informacija kiek laiko užtruko rūšiavimas, o surūšiuoti duomenys išvedami į du atskirus failus.
-  - Jei vartotojas pasirenka 'N' (ne):
-      - Prašoma pasirinkti ar duomenis nori nuskaityti iš failo ar įvesti patys.
-          - Jei pasirenkama nuskaityti iš failo, tai duomenys yra nuskaitomi nuo failo "kursiokai.txt". Jei failas egzistuoja, duomenys nuskaitomi į vektorių ir leidžiama pasirinkti ar galutinį pažymį atspausdinti pagal vidurkį ar medianą.
-          - Jei pasirenkamas įvedimas ranka, prašoma pasirinkti ar egzamino bei namų darbų pažymius sugeneruoti automatiškai ar įvesti ranka.
-           
-            - Abiem atvejais prašoma įvesti studentų skaičių bei vardus ir pavardes.
-            - Pasirinkus automatinį pažymių generavimą prašomą įvesti jų kiekį.
-            - Prašoma pasirinkti ar galutinį pažymį norima matyti suskaičiuotą pagal medianą ar vidurkį.
-      - Ekrane atspausdinami studentų vardai ir pavardės su pasirinktu galutinio pažymio išvedimu.
+- Vartotojas pasirenka, ar nori atlikti rūšiavimo strategijų spartos testą.
+1. Jei pasirinko variantą 'T', bus atliktas rūšiavimo strategijų spartos testas (2 tokios pat strategijos vektoriams ir listams bei trečia strategija vektoriams su std::partition). Spartos testo rezultatai išvedami į ekraną.
+  2. Jei vartotojas pasirinko variantą 'N', jis turi pasirinkti ar nori sugeneruoti failą su atsitiktiniais duomenimis (studentų vardai, pavardės, namų darbų pažymiai, egzamino įvertinimas).
+      3. Jei buvo pasirinktas variantas 'T' (taip), vartotojas turi įvesti norimo sukurti failo pavadinimą bei kiek studentų duomenų nori sugeneruoti automatiškai. Tuomet bus sukuriamas .txt failas. 
+      4. Jei buvo pasirinktas variantas 'N' (ne), tada reikia pasirinkti ar nuskaityti duomenis iš jau esamo failo.
+        5. Jeigu taip, tuomet reikia įvesti failo pavadinimą ir pasirinkti ar nori juos surūšiuoti į dvi atskiras grupes ir išvesti į atskirus failus.
+
+- Jeigu vartotojas į klausimą ar nori nuskaityti duomenis iš jau esnačio failo pasirenka atsakymą 'N' (ne), tuomet seka intrukcijas esančias ekrane (pvz., ar automatiškai sugeneruoti pažymius, su vidurkiu ar mediana pateikti galutinį pažymį).
+     
+
+
 # v0.1
 - Sukurta struktūra "studentas";
 - Įvedamas studentų skaičius, vardai ir pavardės;
@@ -71,35 +66,31 @@
 | 100 000       | 0.821035 s    | 0.0414931 s   |
 | 1 000 000     | 8.57483 s     | 0.391173 s    |
 
+
 # v1.0
 
-Lyginamos dvi strategijos, kurios dalina nuskaito duomenis ir surūšiuoja studentus į dvi grupes.
+Lyginamos dvi strategijos, kurios nuskaito duomenis ir surūšiuoja studentus į dvi grupes.
 
-1. Studentai dedami į konteinerius 'kietiakai' ir 'vargsiukai pagal galutinį įvertinimą;
-2. Studentai, kurių pažymys yea mažesnis nei už 5, yra perkeliami į konteinerį 'vargsiukai' ir ištrinami iš pradinio konteinerio 'studentai'. Konteineryje 'studentai' lieka tik 'kietiakai' t.y. studentai, kurių galutinis balas yra lygus arba didesnis negu 5.
+1. Pridėtas papildomas studentų padalijimo metodas.
+2. Atliktas testas tiek su vektoriais, tiek su listais siekiant ištirti rūšiavimo spartą.
+3. Sukurtas rūšiavimo metodas su std::partition (su vektoriais).
 
-Rūšiavimo laikai:
+Padalijimo laikai:
 
-**1 strategija**
+NAUDOJANT VEKTORIUS:
 
-|               | Rūšiavimas 'vector'  | Rūšiavimas 'list'   |
-| ------------- | -------------        | -------------       |
-| 1 000         | 4.36e-05 s           | 0.0002464 s         |
-| 10 000        | 0.0010357 s          | 0.0025794 s         |
-| 100 000       | 0.0081072 s          | 0.0545146 s         |
-| 1 000 000     | 0.102605 s           | 0.345809 s          |
-| 10 000 000    | 6.26013 s            | 8.96787 s           |
+Padalijimas 1 budu uztruko: 0.0616207 s
+Padalijimas 2 budu uztruko: 0.0466278 s
 
+NAUDOJANT LISTUS:
 
-**2 strategija**
+Padalijimas 1 budu uztruko: 0.0422437 s
+Padalijimas 2 budu uztruko: 0.0534314 s
 
-|               | Rūšiavimas 'vector'  | Rūšiavimas 'list'   |
-| ------------- | -------------        | -------------       |
-| 1 000         | 8.13e-05 s           | 0.0001993 s         |
-| 10 000        | 0.0016487 s          | 0.0015196 s         |
-| 100 000       | 0.0082672 s          | 0.0315691 s         |
-| 1 000 000     | 0.0516942 s          | 0.333509 s          |
-| 10 000 000    | 0.58994 s            | 3.46819 s           |
+Padalijimas 1 budu uztruko: 0.0581852 s
+Padalijimas 2 budu uztruko: 0.0585955 s
+Padalijimas 3 budu uztruko: 0.0218151 s
 
-Iš rezultatų matyti, kad sparčiau veikia antra strategija.
+Išvados: 1-u būdu rūšiavimas su listais veikia greičiau. 2-u būdu, su vektoriais greičiau. 3-čias būdas, naudojant std::partition veikia greičiau už ankstesnius būdus.
+
 
