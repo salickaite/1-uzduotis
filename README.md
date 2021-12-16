@@ -2,10 +2,10 @@
 # Užduoties aprašymas
 - Vartotojas pasirenka, ar nori atlikti rūšiavimo strategijų spartos testą.
 1. Jei pasirinko variantą 'T', bus atliktas rūšiavimo strategijų spartos testas (2 tokios pat strategijos vektoriams ir listams bei trečia strategija vektoriams su std::partition). Spartos testo rezultatai išvedami į ekraną.
-  2. Jei vartotojas pasirinko variantą 'N', jis turi pasirinkti ar nori sugeneruoti failą su atsitiktiniais duomenimis (studentų vardai, pavardės, namų darbų pažymiai, egzamino įvertinimas).
-      3. Jei buvo pasirinktas variantas 'T' (taip), vartotojas turi įvesti norimo sukurti failo pavadinimą bei kiek studentų duomenų nori sugeneruoti automatiškai. Tuomet bus sukuriamas .txt failas. 
-      4. Jei buvo pasirinktas variantas 'N' (ne), tada reikia pasirinkti ar nuskaityti duomenis iš jau esamo failo.
-        5. Jeigu taip, tuomet reikia įvesti failo pavadinimą ir pasirinkti ar nori juos surūšiuoti į dvi atskiras grupes ir išvesti į atskirus failus.
+2. Jei vartotojas pasirinko variantą 'N', jis turi pasirinkti ar nori sugeneruoti failą su atsitiktiniais duomenimis (studentų vardai, pavardės, namų darbų pažymiai, egzamino įvertinimas).
+3. Jei buvo pasirinktas variantas 'T' (taip), vartotojas turi įvesti norimo sukurti failo pavadinimą bei kiek studentų duomenų nori sugeneruoti automatiškai. Tuomet bus sukuriamas .txt failas. 
+4. Jei buvo pasirinktas variantas 'N' (ne), tada reikia pasirinkti ar nuskaityti duomenis iš jau esamo failo.
+5. Jeigu taip, tuomet reikia įvesti failo pavadinimą ir pasirinkti ar nori juos surūšiuoti į dvi atskiras grupes ir išvesti į atskirus failus.
 
 - Jeigu vartotojas į klausimą ar nori nuskaityti duomenis iš jau esnačio failo pasirenka atsakymą 'N' (ne), tuomet seka intrukcijas esančias ekrane (pvz., ar automatiškai sugeneruoti pažymius, su vidurkiu ar mediana pateikti galutinį pažymį).
      
